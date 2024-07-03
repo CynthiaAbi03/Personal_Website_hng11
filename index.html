@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>
+        Personal Website
+    </title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>C</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about-profile-section">About</a></li>
+                    <li><a href="#tech-goals-container">My Goals</a></li>
+                    <li><a href="#useful-links-section">Useful Links</a></li>
+                </ul>
+            </nav>
+            <div class="menu-bar">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </header>
+    </div>
+    <main>
+        <div class="container">
+            <div class="main-container">
+
+                <section class="data-time-section">
+                    <p data-testid="currentTimeUTC">Current Time (GMT + 1): <span id="current-time"></span></p>
+                    <p data-testid="currentDay">Current Day: <span id="current-day"></span></p>
+                </section>
+                
+                <section id="about-profile-section" class="about-profile-section">
+
+                    <div class="about-container ">
+                       
+                        <div class="intro-container">
+                            <p>Hi, i am</p>
+                            <p>Cynthia Abissegue</p>
+                            <p>Frontend Developer</p>
+                        </div>
+                        <p class="about-text">
+                            I am a 4th-year Computer Engineering student, graduating next year. I am proficient in HTML, CSS, and JavaScript, and I continuously seek to improve my skills and stay updated with the latest industry trends.
+                        </p>
+                        <p class="about-text">
+                            This year, I am currently enrolled in the HNG Internship 11, where I am eager to hone my skills and gain the necessary experience to solve real-world problems.
+                        </p>                             
+                            
+                    </div>
+                    <div class="profile-container">
+                        <div class="img-container">
+                            <img src="./images/Pfx.jpeg" alt="Slack Profile Picture" data-testid="slackProfilePicture">
+                        </div>
+                        <div class="slack-details">
+                            <p data-testid="slackDisplayName">Slack Name: Cynthia_Abi</p>
+                            <p data-testid="slackEmail">Slack Email: abisseguecynthia@gmail.com</p>
+                        </div>
+                    </div>
+                </section>
+           
+    
+                <section id="tech-goals-container" class="tech-goals-container">
+                    <h2>My Tech Goals for the Next 2 Years</h2>
+                    <p>
+                        As I approach the completion of my Bachelor's degree in Computer Engineering, my primary goal for the coming year is to graduate successfully. 
+                        This milestone will mark the beginning of an exciting journey toward advanced education and professional growth.
+                    </p>
+                    <p>
+                        Upon graduating, I plan to pursue a Master of Science (MSc) in Data Science and Artificial Intelligence.
+                        I am passionate about the immense potential these fields hold for transforming industries and solving complex problems.
+                          My goal is to gain a deep understanding of machine learning algorithms, data analysis techniques, and AI-driven solutions.
+                    </p>
+                    <p>
+                        In parallel with my academic pursuits, I aim to enhance my skills as a frontend developer.
+                         I will continue to refine my proficiency in HTML, CSS, and JavaScript, while also exploring advanced frameworks
+                          and libraries such as React and Next js.
+                          My objective is to create fully functional, responsive, and visually appealing user interfaces.
+                    </p>
+                    <p>
+                        Additionally, I am excited about the prospect of integrating my software development skills with AI technologies.
+                        I plan to work on projects that leverage the synergy between these domains, 
+                        such as developing intelligent web applications, predictive analytics tools, 
+                        and automated solutions that address real-world challenges.
+                    </p>
+                    <p>
+                        Overall, my tech goals for the next two years are focused on academic excellence, skill enhancement, and innovative project development. I am committed to continuous learning and growth, and I look forward to making significant contributions to the tech industry.
+                    </p>
+                </section>
+
+                <section id="useful-links-section" class="useful-links-section">
+                    <h2>Useful Links</h2>
+                    <ul class="useful-links">
+                        <li><a href="https://hng.tech/learn" target="_blank" data-testid="hngLink">HNG Learn</a></li>
+                        <li><a href="https://keyword.dog" target="_blank" data-testid="keywordLink">Keyword Dog</a></li>
+                        <li><a href="https://scrapeanyweb.site" target="_blank" data-testid="scrapeanywebLink">Scrape Any Web</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+   <script src="script.js"></script> 
+</body>
+</html>
