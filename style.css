@@ -4,6 +4,7 @@
 }
 :root {
     --background-color: #1a1625;
+    --light-background-color: #2f2b3a;
     --primary-text: #e0e0e0;
     --secondary-text: #b0b0b0;
     --primary-accent: #a688fa;
@@ -38,16 +39,25 @@ h2 {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--background-color) ;
+  
+   
+}
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-ul {
+} 
+ nav ul{
     display: flex;    
     cursor: pointer;
     list-style-type: none;
 }
-nav ul li {
+ nav ul li {
     display: inline-block;
     margin: 10px 20px;
 
@@ -83,10 +93,11 @@ nav ul li:hover a::before {
     display: none;
 }
 header .menu-bar .bar {
-    width: 25px;
+    width: 30px;
     height: 3px;
     margin: 3px;
-    background-color: black;
+   
+    background-color: white;
     transition: all 0.3s ease-in-out;
 }
 main {
@@ -110,6 +121,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
 }
 
 
@@ -187,4 +199,165 @@ img{
 }
 .useful-links li a {
     color: var(--secondary-accent);
+}
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+    nav ul {
+        display: flex;
+        position: fixed;
+        left:-100%;
+        top:70px;
+        width: 100%;
+        padding: 0 80% 0 80%;
+        flex-direction: column;
+        background-color: var(--light-background-color);
+        padding: 2px 0px 2px 0px;
+        transition: all ease-in-out .3s;
+        margin: none;
+        z-index: 2;
+    }
+
+    .menu-bar {
+
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    header .menu.active {
+        left: 0;
+        z-index: 2;
+    }
+    header .menu li a {
+        display: inline-block;
+        cursor: pointer;
+       
+    }
+
+    .menu-bar.active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+    
+    .menu-bar.active .bar:nth-child(2) {
+        opacity: 0
+    }
+    
+    .menu-bar.active .bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+    .about-container{
+        margin-top: 1rem;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        gap:3rem;
+    }
+    .about-profile-section {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .data-time-section {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+        
+    }
+    .intro-container p:nth-child(2) {
+        font-size: 1.5rem ;
+    }
+
+}
+@media only screen and (min-width: 500px) and (max-width: 766px){
+
+    nav ul {
+        display: flex;
+        position: fixed;
+        left:-100%;
+        top:70px;
+        width: 100%;
+        padding: 0 80% 0 80%;
+        flex-direction: column;
+        background-color: var(--light-background-color);
+        padding: 2px 0px 2px 0px;
+        transition: all ease-in-out .3s;
+        margin: none;
+        z-index: 2;
+    }
+
+    .menu-bar {
+
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    header .menu.active {
+        left: 0;
+        z-index: 2;
+    }
+    header .menu li a {
+        display: inline-block;
+        cursor: pointer;
+       
+    }
+
+    .menu-bar.active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+    
+    .menu-bar.active .bar:nth-child(2) {
+        opacity: 0
+    }
+    
+    .menu-bar.active .bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+    .about-container{
+        margin-top: 2rem;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        gap:3rem;
+    }
+    .about-profile-section {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+        
+    }
+    .intro-container p:nth-child(2) {
+        font-size: 1.8rem ;
+    }
+
+
+}
+
+@media only screen and (min-width: 766px) and (max-width: 1200px) {
+
+    .main-container {
+        gap: 2rem;
+    }
+
+    .about-profile-section{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .about-container{
+        margin-top: 2em;
+    }
+    h2 {
+        font-size: 1.8rem;
+        
+    }
+    .intro-container p:nth-child(2) {
+        font-size: 2rem ;
+    }
 }
